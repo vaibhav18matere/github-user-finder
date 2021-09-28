@@ -5,6 +5,11 @@ import UserItems from './Components/User/UserItems';
 import Users from './Components/User/Users';
 
 class App extends Component {
+
+  componentDidMount() {
+
+  }
+
   render() {
 
     return (
