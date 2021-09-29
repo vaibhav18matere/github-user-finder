@@ -3,34 +3,10 @@ import UserItems from './UserItems';
 
 class Users extends Component {
 
-    state = {
-        users: [
-            {
-                id: 1,
-                login: "Vaibhav",
-                avatar_url: "https://avatars.githubusercontent.com/u/1?v=4",
-                html_url: "https://github.com/mojombo"
-            },
-            {
-                id: 2,
-                login: "Harsh",
-                avatar_url: "https://avatars.githubusercontent.com/u/1?v=4",
-                html_url: "https://github.com/mojombo"
-            },
-            {
-                id: 3,
-                login: "Pratik",
-                avatar_url: "https://avatars.githubusercontent.com/u/1?v=4",
-                html_url: "https://github.com/mojombo"
-            }
-        ]
-    }
-
-
     render() {
         return (
             <div style={userStyle}>
-                {this.state.users.map(user => (
+                {this.props.users.map(user => (
                     <UserItems key={user.id} user={user} />
                 ))}
             </div>
