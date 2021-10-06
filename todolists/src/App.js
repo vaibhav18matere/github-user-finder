@@ -31,20 +31,20 @@ class App extends Component {
   }
   //clear github users
   clearUsers = () => {
+
     this.setState({ users: [], loading: false })
   }
 
-
   render() {
-
+    const { users, loading } = this.state; //destructuring
     return (
       <div className="App" >
         <Navbar />
         <div className="container" >
 
-          <Search searchUsers={this.searchUsers} clearUsers={this.clearUsers} showClear={this.state.users.length > 0 ? true : false} />
+          <Search searchUsers={this.searchUsers} clearUsers={this.clearUsers} showClear={users.length > 0 ? true : false} />
 
-          <Users loading={this.state.loading} users={this.state.users} />
+          <Users loading={loading} users={users} />
         </div>
       </div>
     );
@@ -53,7 +53,3 @@ class App extends Component {
 }
 
 export default App;
-
-
-// client secret
-// 8bd24c23fcc14f86c012be6fe861486543a20402
