@@ -12,3 +12,5 @@ const Alert = ({ alert }) => {
 
 
 export default Alert;
+
+//alert not working properly
